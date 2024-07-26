@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Product List</title>
+</head>
+
+<body>
+<h1 style="background-color: rgb(7, 6, 7);text-align: center">My First Website</h1>
+
+<div>
+    {% for product in products %}
+        Name : <a href="{% url 'product_detail' product.id %}">{{ product.title }}</a> <br>
+        Author : {{ product.author }}<br>
+
+        <hr>
+    {% endfor %}
+</div>
+</ul>
+</body>
+
+</html>
